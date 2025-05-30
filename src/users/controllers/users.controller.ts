@@ -36,7 +36,7 @@ export class UsersController {
 
   @Patch(':id')
   async update(
-    @Param('id') id: string,
+    @Param('id') id: string, // @Param extrai os parametros da rota URL
     @Body() updateUserdto: UpdateUserDto,
   ): Promise<ResponseUserDto> {
     return await this.usersService.update(+id, updateUserdto);
